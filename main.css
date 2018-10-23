@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.wrapper {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 22px 30px 30px 33px;
+    font-size: 50px;
+    align-content: center;
+    font-family: 'Bai Jamjuree', sans-serif;
+    background: #274E9B;
+    border-radius: 10px;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+}
+
+
+
+
+.N {
+    font-weight: 900; 
+
+}
+.curly1, .curly2 {
+    padding: 0px;
+    color: rgb(214, 194, 12);
+
+
+}
+
+.C, .N {
+color: white;
+}
+
+.cta:hover{
+    background: white;
+    box-shadow: 6px 6px rgb(214, 194, 12);
+    transition: 1s;
+    animation: spin 1s both linear, scale 1s both linear;
+}
+.cta:hover span {
+    color: #274E9B;
+    transition: 1s;
+}
+
+.social {
+    position: absolute;
+    top: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0px 20px;
+}
+
+.facebook, .twitter, .instagram {
+    padding: 20px 50px;
+    
+}
+.facebook:hover, .twitter:hover, .instagram:hover{
+    filter: grayscale(75%);
+    transition: 1s;
+}
+
+.facebook:hover {
+    animation: beat 1.5s both infinite;
+}
+.twitter:hover{
+    animation: skew 2s both infinite;
+}
+.instagram:hover {
+    animation: slowbuild 40s both ease-in;
+}
+
+.shootingstar1 {
+    position: absolute;
+   animation: go 5s 7s both infinite ease-out, shootingstar1 5s 7s both infinite ease-out;
+   filter: opacity(0.5);
+}
+.shootingstar2 {
+    position: absolute;
+    right: 0px;
+    filter: opacity(0.5);
+    animation: go 5s 1s reverse both infinite ease-out, shootingstar2 5s 1s both infinite ease-out;
+}
+
+@keyframes scale {
+    from{transform: scale(1) rotate(0deg)}
+    to{transform: scale(2) rotate(360deg)}
+}
+
+@keyframes beat {
+    0%{transform: scale(1)}
+    50%{transform: scale(2)}
+    100%{transform: scale(1)}
+}
+@keyframes skew {
+    0%{transform: scale(1.5) skew(0)}
+    33%{transform: scale(1.5) skew(-30deg)}
+    66%{transform: scale(1.5) skew(30deg)}
+    100%{transform: scale(1.5) skew(0)}
+}
+
+@keyframes slowbuild {
+    from {transform: scale(1)}
+    to{transform: scale(20)}
+}
+
+@keyframes go {
+    from{left: -20%}
+    to{left: 120%}
+}
+ 
+@keyframes shootingstar1{
+    from {top: 0%}
+    to {top: 30%}
+}
+
+@keyframes shootingstar2{
+    from {top: 10%}
+    to{top: 40%}
+}
